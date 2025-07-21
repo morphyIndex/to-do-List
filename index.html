@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morph-To-Do</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Media Query -->
+    <link rel="stylesheet" href="mediaQuery.css">
+</head>
+<body>
+    <div class="overlay-input">
+        <button class="toggle"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Add the task</h2>
+        <textarea name="task" id="" class="task"></textarea>
+        <button type="submit" class="submit"><img src="images/output-onlinegiftools (1) (1).png" alt=""></button>
+    </div>
+    <div class="container">
+        <div class="first">
+            Modern <br>to-do List <br>Simple & Clean
+        </div>
+        <div class="second">
+            <button class="add-new-task today-task"><i class="fa-solid fa-plus"></i></button>
+            <h1>Today</h1>
+            <ol class="list-area today-task-list"></ol>
+        </div>
+        <div class="third">
+            <button class="personal-task add-new-task"><i class="fa-solid fa-plus"></i></button>
+            <h1>Important Tasks</h1>
+            <ol class="list-area important-task-list"></ol>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

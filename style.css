@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: checkbox;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFEA73;
+}
+
+.overlay-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    background-color: #FFEA73;
+    padding: 10px 20px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.2);
+}
+
+img {
+    width: 40px;
+    height: 40px;
+}
+
+
+h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 1px 7px -3px rgba(0, 0, 0, .2);
+    scrollbar-color: whitesmoke #ffea73;
+}
+
+textarea:focus {
+    box-sizing: none;
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.first {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: bold;
+    flex: 1;
+}
+
+.second, .third {
+    background-color:#F9F5F4;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: whitesmoke #ffea73;
+    margin: 10px 5px;
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    box-shadow: 4px 5px 7px -3px rgba(0,0,0,0.2);
+}
+
+h1 {
+    position: relative;
+}
+
+.second h1, .third h1 {
+    position: sticky;
+    top: 0;
+    background-color: #eee;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left:0;
+    height: 3px;
+    width:50px;
+    background-color: #FFEA73;
+}
+
+.add-new-task {
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFEA73;
+    border: none;
+    font-size: 18px;
+    text-shadow: 0 0 2px 2px white;
+    transition: .2s;
+}
+
+
+.add-new-task:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.add-new-task:active{
+    color: white
+}
+
+.toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: tomato;
+    width: 25px;
+    height: 25px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.toggle:hover {
+    background-color: #292b2c;
+}
+
+.submit {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 15px;
+    border: 1px solid transparent;
+    color: black;
+    background-color: white;
+    transition: .3s;
+}
+
+.submit:hover {
+    color: white;
+    border: 1px solid #FFEA73
+}
+
+ol {
+    padding: 50px 0;
+    list-style: decimal outside;
+}
+
+li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 18px;
+    gap: 15px;
+    font-weight: bold;
+    background-color: #F3EFEE;
+    padding: 20px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+li:hover {
+    background-color: #eee;
+    box-shadow: 1px 1px 5px -3px rgba(0,0,0,0.2);
+}
+
+.checkBox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.checkBox:checked {
+background-color: white;
+border: 1px solid #F9F5F4;
+box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+}
+
+.checkBox:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 2px;
+  height: 8px;
+  border: solid #292b2c;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.hover-cancel-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 30px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    display: none;
+    transition: .2s;
+}
+
+.hover-cancel-button:hover {
+    background-color: tomato;
+}
